@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La paracha de Ki-Tavo</title>
+    <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="banniere-icon.png" type="image/x-icon">
+</head>
+<body>
+    <button class="menu-button"><i class="fas fa-bars"></i></button>
+   <div class="sidebar">
+      <div class="menu-tabs">
+         <a href="Index.html" class="menu-tab">Bar-Mitzvah Sacha</a>
+         <a href="2.html" class="menu-tab">Enseignements</a>
+         <a href="3.html" class="menu-tab">Remerciements</a>
+         <a href="4.html" class="menu-tab">Discours Benjamin</a>
+      </div>
+   </div>
+<div class="ki-tavo">    
+    <p>Bonjour à toutes et à tous,
+
+    Aujourd'hui, je me tiens devant vous pour célébrer ma Bar Mitzvah, un moment significatif 
+    de ma vie où je fais mes premiers pas en tant qu'adulte responsable dans la communauté
+    juive. Je suis honoré de partager ce jour si spécial avec vous et de vous parler de la paracha
+    de Ki Tavo.
+
+    Moïse enseigne au peuple : « Quand tu entreras sur la terre que D.ieu te donne en héritage
+    éternel, que tu t’y installeras et que tu la cultiveras, tu apporteras les premiers fruits
+    (bikourim) de tes vergers au Saint Temple, et tu déclareras ta gratitude pour tout ce que 
+    D.ieu a fait pour toi. »
+
+    La paracha se poursuit ensuite par les différents  prélèvements que la Torah ordonne de
+    donner aux pauvres:  aux Lévites, aux étrangers, aux veuves et aux orphelins.
+
+    Moché rappelle le lien qui unit D.ieu au peuple juif : D.ieu a élu le peuple juif, et le peuple juif
+    a choisi D.ieu.
+
+    Je n’ai pas lu la dernière partie de la paracha: il est coutume que le Bar Mitzva ne lise pas
+    cette partie puisque dans cette dernière, il est question d’avertissements. Après avoir
+    énuméré les bénédictions par lesquelles D.ieu récompensera le peuple quand il accomplira
+    les Commandements de la Torah, Moïse rapporte longuement les terribles conséquences de
+    leur abandon : maladie, famine, pauvreté et, exil.
+
+    Moché termine, en insistant sur les quarante années qui se sont écoulées depuis la sortie
+    d’Egypte, et qui ont permis au peuple juif d’atteindre un niveau de maturité spirituelle : « un
+    cœur pour être conscient, des yeux pour voir, et des oreilles pour entendre ».
+    
+    </p>
+</div>
+<script>
+    const menuButton = document.querySelector('.menu-button');
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarTabs = document.querySelector('.menu-tabs');
+
+      menuButton.addEventListener('click', () => {
+         sidebar.classList.toggle('sidebar-open');
+         menuButton.classList.toggle('open');
+      });
+
+      sidebarTabs.addEventListener('click', () => {
+         sidebar.classList.remove('sidebar-open');
+         menuButton.classList.remove('open');
+      });
+</script>
+
+</body>
+</html>

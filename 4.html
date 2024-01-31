@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discours Benjamin</title>
+    <link rel="stylesheet" href="3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="banniere-icon.png" type="image/x-icon">
+</head>
+<body>
+    <button class="menu-button"><i class="fas fa-bars"></i></button>
+    <div class="sidebar">
+       <div class="menu-tabs">
+          <a href="Index.html" class="menu-tab">Bar-Mitzvah Sacha</a>
+          <a href="1.html" class="menu-tab">La paracha de Ki-Tavo</a>
+          <a href="2.html" class="menu-tab">Enseignements</a>
+          <a href="3.html" class="menu-tab">Remerciements</a>
+       </div>
+    </div>
+<div class="Benji">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, ad nobis. Optio expedita dignissimos quod. Ut in iusto esse, delectus repellat aliquam eos odit minus eaque, nesciunt nulla. Fugit, distinctio!
+        </p>
+</div>
+<script>
+    const menuButton = document.querySelector('.menu-button');
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarTabs = document.querySelector('.menu-tabs');
+    
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-open');
+            menuButton.classList.toggle('open');
+        });
+    
+        sidebarTabs.addEventListener('click', () => {
+            sidebar.classList.remove('sidebar-open');
+            menuButton.classList.remove('open');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTyPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="index.css">
+   <link rel="icon" href="banniere-icon.png" type="image/x-icon">
+   <title>BM Sacha</title>
+</head>
+<body>
+   <button class="menu-button"><i class="fas fa-bars"></i></button>
+   <div class="sidebar">
+      <div class="menu-tabs">
+         <a href="1.html" class="menu-tab">La paracha de Ki-Tavo</a>
+         <a href="2.html" class="menu-tab">Enseignements</a>
+         <a href="3.html" class="menu-tab">Remerciements</a>
+         <a href="4.html" class="menu-tab">Discours Benjamin</a>
+      </div>
+   </div>
+   <div class="gradient-container">
+      <h1>Bar Mitzvah Sacha</h1>
+      <h3> Bar Mitzvah Sacha <br> -- <br>Discours et remerciements</h3>
+   </div>
+   <script>
+      const menuButton = document.querySelector('.menu-button');
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarTabs = document.querySelector('.menu-tabs');
+
+      menuButton.addEventListener('click', () => {
+         sidebar.classList.toggle('sidebar-open');
+         menuButton.classList.toggle('open');
+      });
+
+      sidebarTabs.addEventListener('click', () => {
+         sidebar.classList.remove('sidebar-open');
+         menuButton.classList.remove('open');
+      });
+   </script>
+</body>
+</html>

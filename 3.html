@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remerciements</title>
+    <link rel="stylesheet" href="3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="banniere-icon.png" type="image/x-icon">
+</head>
+<body>
+    <button class="menu-button"><i class="fas fa-bars"></i></button>
+    <div class="sidebar">
+       <div class="menu-tabs">
+          <a href="Index.html" class="menu-tab">Bar-Mitzvah Sacha</a>
+          <a href="1.html" class="menu-tab">La paracha de Ki-Tavo</a>
+          <a href="2.html" class="menu-tab">Enseignements</a>
+          <a href="4.html" class="menu-tab">Discours Benjamin</a>
+       </div>
+    </div>
+<div class="remerciements">
+    <p>Chers amis et famille,
+
+        Je suis vraiment ravi de vous voir tous réunis ici pour célébrer ma Bar Mitzvah.
+        C'est un moment important pour moi, et je tiens à remercier chacun d'entre vous 
+        d’être ici aujourd'hui. Même si mes parents ont voulu fériériser ce jour, je sais
+        que pour beaucoup c’est un jour de semaine, merci de m’honorer de votre présence.
+        
+        Je dois être honnête en ce jour solennel, je me suis un peu aidé de ChatGpt. 
+        Vous ne me verrez pas souvent prendre la parole en public, alors profitez-en 
+        le prochain discours n’aura pas lieu avant longtemps ! 
+        
+        En grandissant, on m'a souvent dit que la Bar Mitzvah est le moment où l'on
+        devient un adulte dans la religion juive. Et je dois avouer que cela ressemble
+         un peu à un grand pas en avant. Je veux dire, maintenant que je suis
+        officiellement un adulte, est-ce que cela veut dire que je peux enfin parler
+        de la politique et de la météo ?
+        </p>
+</div>
+<span>Open image link in a new tab: 
+    <a href=/* Mettre l'url vers */ target="_blank"> /// Mettre l'url vers remerciements2///
+     <img src="move-right.svg" />
+    </a>
+   </span>
+<script>
+    const menuButton = document.querySelector('.menu-button');
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarTabs = document.querySelector('.menu-tabs');
+    
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-open');
+            menuButton.classList.toggle('open');
+        });
+    
+        sidebarTabs.addEventListener('click', () => {
+            sidebar.classList.remove('sidebar-open');
+            menuButton.classList.remove('open');
+});
+    </script>
+</body>
+</html>
