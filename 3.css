@@ -84,22 +84,9 @@ body {
     left: 0;
  }
 
-/* Styles pour l'icône de flèche personnalisée */
-.arrow-link {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-decoration: none;
-  }
-  
-  .arrow-icon {
-    font-size: 40px; /* Ajustez la taille de la police selon vos préférences */
-    color: #fff; /* Couleur de l'icône */
-    transition: transform 0.3s ease;
-  }
-  
-  /* Animation de rotation au survol de l'icône */
-  .arrow-link:hover .arrow-icon {
-    transform: rotate(90deg);
-  }
+.Arrow {
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+}
   
