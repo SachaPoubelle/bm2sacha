@@ -1,83 +1,51 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Page non trouvée</title>
-  <style>
-    body {
-      background: linear-gradient(to right, #3498db, #2c3e50);
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: 'Arial', sans-serif;
-    }
+  <meta charset="utf-8">
+  <title>404 - PAge non trouvée</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    h1 {
-      font-size: 20em;
-      margin: 0;
-      background-clip: text;
-      color: transparent;
-      transition: transform 0.5s ease;
-      animation: glow 2s linear infinite;
-    }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
+  <link href="404.css" rel="stylesheet">
+  <script src="404.js"></script>
+<script type="x-shader/x-vertex" id="vertexshader">
 
-    h1:hover {
-  transform: scale(1.2);
-    }
+  attribute float size;
+  attribute vec3 customColor;
+  varying vec3 vColor;
 
-    @keyframes glow {
-      0% {
-        text-shadow: 0 0 5px #885bde;
-      }
-      25% {
-        text-shadow: 0 0 5px #5a8eed;
-      }
-      50% {
-        text-shadow: 0 0 5px #dd5ad0;
-      }
-      75% {
-        text-shadow: 0 0 5px #dd5ad0;
-      } 
-      50% {
-        text-shadow: 0 0 5px #8b1f80;
-      }      
-    }
+  void main() {
 
-    p {
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 60px;
-        color: black;
-    }
+    vColor = customColor;
+    vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+    gl_PointSize = size * ( 300.0 / -mvPosition.z );
+    gl_Position = projectionMatrix * mvPosition;
 
-    button {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 25%;
-        font-size: 20px;
-        color: white;
-        background-color: #0b81cb;
-        border-radius: 25px;
-        padding: 15px;
-        border: #3498db;
-        transition: background-color 0.3s ease;
-    }
+  }
 
-    button:hover {
-        box-shadow: 0 0 20px 0;
-    }
+</script>
+<script type="x-shader/x-fragment" id="fragmentshader">
 
-  </style>
-</head>
-<body>
-  <h1>4</h1> <h1>0</h1> <h1>4</h1>
-  <p>Bah alors, on est perdu ?</p>
-  <a href="index.html"><button>Retourner à l'accueil !</button></a>
+ uniform vec3 color;
+ uniform sampler2D pointTexture;
+
+ varying vec3 vColor;
+
+ void main() {
+
+   gl_FragColor = vec4( color * vColor, 1.0 );
+   gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+
+ }
+</script>
+  </head>
+  <body class="body">
+    <div id="magic"></div>
+    <div class="playground">
+      <div class="bottomPosition">
+      </div>
+    </div>
 </body>
 </html>
